@@ -7,3 +7,13 @@ def index(request):
 
 def admin(request):
     return HttpResponse("helle this is Admin")
+
+def detail(request,question_id):
+    return HttpResponse("You are looking question: %s"%question_id)
+
+def results(requst,question_id):
+    rep = HttpResponse("You are looking question: %s"%question_id)
+    return HttpResponse(rep%question_id)
+
+def vote(resquest,question_id):
+    return  HttpResponse("You are vating on question: %s"%question_id)
